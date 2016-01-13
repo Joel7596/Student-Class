@@ -2,7 +2,8 @@ package student.report.card.oop;
 
 public class Student {
 
-    String markCourse[][] = new String[4][2];
+    String course[] = new String[4];
+    int mark[] = new int[4];
     int studentNumber;
     int average;
     String lastName;
@@ -11,8 +12,7 @@ public class Student {
     public int calulateAverage() {
         int markSum = 0;
         for (int j = 0; j < 4; j++) {
-            int markTemp = Integer.parseInt(markCourse[j][1]);
-            markSum = markSum + markTemp;
+            markSum = markSum + mark[j];
         }
         average = markSum / 4;
         return average;
